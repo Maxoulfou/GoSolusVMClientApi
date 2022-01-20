@@ -17,7 +17,7 @@ type Config interface {
 	Load()
 }
 
-func (receiver *JSON) Load() *entity.JSON {
+func (receiver *JSON) Load() *JSON {
 	// TODO : link to cli interface
 	JsonFile, ErrReadJsonFile := ioutil.ReadFile("config/conf-prod.json")
 	if ErrReadJsonFile != nil {
@@ -29,5 +29,5 @@ func (receiver *JSON) Load() *entity.JSON {
 		log.Fatalf("JSON JSON struct ErrUnmarshalJsonFile: " + ErrUnmarshalJsonFile.Error())
 	}
 
-	return (*entity.JSON)(receiver)
+	return receiver
 }
