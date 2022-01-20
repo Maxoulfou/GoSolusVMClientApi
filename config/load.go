@@ -1,6 +1,7 @@
 package config
 
 import (
+	"GoSolusVMClientApi/entity"
 	"encoding/json"
 	"io/ioutil"
 	"log"
@@ -16,7 +17,7 @@ type Config interface {
 	Load()
 }
 
-func (receiver *JSON) Load() *JSON {
+func (receiver *JSON) Load() *entity.JSON {
 	// TODO : link to cli interface
 	JsonFile, ErrReadJsonFile := ioutil.ReadFile("config/conf-prod.json")
 	if ErrReadJsonFile != nil {
@@ -28,5 +29,5 @@ func (receiver *JSON) Load() *JSON {
 		log.Fatalf("JSON JSON struct ErrUnmarshalJsonFile: " + ErrUnmarshalJsonFile.Error())
 	}
 
-	return receiver
+	return (*entity.JSON)(receiver)
 }
