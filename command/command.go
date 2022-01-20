@@ -92,5 +92,11 @@ func Output(array []string, action string) {
 	case "info":
 		Info(array)
 		break
+	case "help":
+		Help()
+		break
+	default:
+		Help()
+		break
 	}
 }
