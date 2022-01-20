@@ -1,7 +1,6 @@
 package config
 
 import (
-	"GoSolusVMClientApi/entity"
 	"encoding/json"
 	"io/ioutil"
 	"log"
