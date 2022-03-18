@@ -11,7 +11,7 @@ func Boot(array []string) {
 }
 
 func Shutdown(array []string) {
-	fmt.Printf("Status: %+v\nStatus MSG: %+v\nHostname: %+v\nIP: %+v\n", array[0], array[1], array[2], array[3])
+	fmt.Printf("Le serveur rompiche\nStatus: %+v\nStatus MSG: %+v\nHostname: %+v\nIP: %+v\n", array[0], array[1], array[2], array[3])
 }
 
 func Status(array []string) {
